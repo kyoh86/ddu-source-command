@@ -1,3 +1,3 @@
 # ddu-source-command
 
-Ex-Command source for ddu.vim
+User defined Ex-Command source for ddu.vim

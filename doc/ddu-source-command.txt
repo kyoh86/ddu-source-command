@@ -1,7 +1,8 @@
-*ddu-source-command.txt*	command source for ddu.vim
+*ddu-source-command.txt*	User defined Ex-Command source for ddu.vim
 
 Author: kyoh86
 License: MIT license
+Forked from ddu-source-command_history (by matsui54 <haru.matu9168 at gmail.com>
 
 CONTENTS				*ddu-source-command-contents*
 
@@ -15,7 +16,7 @@ Actions			|ddu-kind-command-actions|
 ==============================================================================
 INTRODUCTION			*ddu-source-command-introduction*
 
-This source collects ex-command.
+This source collects ex-command that user defined.
 
 
 ==============================================================================
@@ -35,7 +36,7 @@ ACTIONS					*ddu-kind-command-actions*
 
 					*ddu-kind-command-action-edit*
 edit
-		Put command in command line to edit.
+		Put the command in command line to edit.
 
 
 ==============================================================================
