@@ -8,9 +8,9 @@ CONTENTS				*ddu-source-command-contents*
 
 Introduction		|ddu-source-command-introduction|
 Install			|ddu-source-command-install|
-Examples		|ddu-source-command-examples|
 Params			|ddu-source-command-params|
 Actions			|ddu-kind-command-actions|
+Examples		|ddu-source-command-examples|
 
 
 ==============================================================================
@@ -37,6 +37,24 @@ ACTIONS					*ddu-kind-command-actions*
 					*ddu-kind-command-action-edit*
 edit
 		Put the command in command line to edit.
+
+
+==============================================================================
+EXAMPLES				*ddu-source-command-examples*
+
+>
+	" Use emoji source.
+	call ddu#start({ 'sources': [{ 'name': 'command' }] })
+
+	" You must set the default action.
+	call ddu#custom#patch_global(#{
+	    \   kindOptions: #{
+	    \     command: #{
+	    \       defaultAction: 'edit',
+	    \     },
+	    \   }
+	    \ })
+<
 
 
 ==============================================================================
