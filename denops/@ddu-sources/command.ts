@@ -3,9 +3,9 @@ import {
   ActionFlags,
   BaseSource,
   Item,
-} from "https://deno.land/x/ddu_vim@v3.6.0/types.ts";
-import { fn } from "https://deno.land/x/ddu_vim@v3.6.0/deps.ts";
-import { OnInitArguments } from "https://deno.land/x/ddu_vim@v3.6.0/base/source.ts";
+} from "https://deno.land/x/ddu_vim@v3.8.1/types.ts";
+import { fn } from "https://deno.land/x/ddu_vim@v3.8.1/deps.ts";
+import { OnInitArguments } from "https://deno.land/x/ddu_vim@v3.8.1/base/source.ts";
 
 export type ActionData = {
   command: string;
