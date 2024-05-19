@@ -48,10 +48,16 @@ jobs:
 
       - uses: rhysd/action-setup-vim@v1
         id: vim
+        with:
+          version: v8.2.5172
 
       - name: Export Vim Executable
         run: |
           echo "DENOPS_TEST_VIM_EXECUTABLE=${{ steps.vim.outputs.executable }}" >> "$GITHUB_ENV"
+
+      - name: Export Vim Version
+        run: |
+          ${{ steps.vim.outputs.executable }} --version
 
       - uses: rhysd/action-setup-vim@v1
         id: nvim
@@ -61,6 +67,10 @@ jobs:
       - name: Export Neovim Executable
         run: |
           echo "DENOPS_TEST_NVIM_EXECUTABLE=${{ steps.nvim.outputs.executable }}" >> "$GITHUB_ENV"
+
+      - name: Export Neovim Version
+        run: |
+          ${{ steps.nvim.outputs.executable }} --version
 
       - name: Run tests
         run: deno task test
