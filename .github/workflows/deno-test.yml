@@ -50,7 +50,7 @@ jobs:
       - uses: rhysd/action-setup-vim@v1
         id: vim
         with:
-          version: v8.2.5172
+          version: v9.1.0400
 
       - name: Export Vim Executable
         run: |
