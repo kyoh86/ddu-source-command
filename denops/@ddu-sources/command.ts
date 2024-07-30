@@ -1,11 +1,6 @@
-import {
-  ActionArguments,
-  ActionFlags,
-  BaseSource,
-  Item,
-} from "https://deno.land/x/ddu_vim@v4.1.1/types.ts";
-import { fn } from "https://deno.land/x/ddu_vim@v4.1.1/deps.ts";
-import { OnInitArguments } from "https://deno.land/x/ddu_vim@v4.1.1/base/source.ts";
+import { BaseSource, type Item } from "jsr:@shougo/ddu-vim@5.0.0/types";
+import * as fn from "jsr:@denops/std@7.0.1/function";
+import type { OnInitArguments } from "jsr:@shougo/ddu-vim@5.0.0/source";
 
 export type ActionData = {
   command: string;
@@ -63,14 +58,6 @@ export class Source extends BaseSource<Params> {
       },
     });
   }
-
-  actions = {
-    edit: async ({ denops, items }: ActionArguments<Params>) => {
-      const action = items[0]?.action as ActionData;
-      await fn.feedkeys(denops, `:${action.command}`, "n");
-      return Promise.resolve(ActionFlags.None);
-    },
-  };
 
   params(): Params {
     return {};
