@@ -1,7 +1,7 @@
-import type { Item } from "jsr:@shougo/ddu-vim@~6.1.0/types";
-import { BaseSource } from "jsr:@shougo/ddu-vim@~6.1.0/source";
-import * as fn from "jsr:@denops/std@~7.1.0/function";
-import type { OnInitArguments } from "jsr:@shougo/ddu-vim@~6.1.0/source";
+import type { Item } from "jsr:@shougo/ddu-vim@~6.2.0/types";
+import { BaseSource } from "jsr:@shougo/ddu-vim@~6.2.0/source";
+import * as fn from "jsr:@denops/std@~7.3.0/function";
+import type { OnInitArguments } from "jsr:@shougo/ddu-vim@~6.2.0/source";
 
 export type ActionData = {
   command: string;
@@ -10,9 +10,9 @@ export type ActionData = {
 type Params = Record<never, never>;
 
 export class Source extends BaseSource<Params> {
-  kind = "command";
+  override kind = "command";
   commands: Item<ActionData>[] = [];
-  async onInit(_args: OnInitArguments<Params>) {
+  override async onInit(_args: OnInitArguments<Params>) {
     try {
       /* `:command` gives lines like below.
     Name              Args Address Complete    Definition
