@@ -1,26 +1,30 @@
-*ddu-source-command.txt*	User defined Ex-Command source for ddu.vim
+*ddu-source-command.txt*    User defined Ex-Command source for ddu.vim
 
 Author: kyoh86
 License: MIT license
 Forked from ddu-source-command_history (by matsui54 <haru.matu9168 at gmail.com>
 
-CONTENTS				*ddu-source-command-contents*
+Contents ~
+                                                 *ddu-source-command-contents*
 
-Introduction		|ddu-source-command-introduction|
-Install			|ddu-source-command-install|
-Params			|ddu-source-command-params|
-Actions			|ddu-kind-command-actions|
-Examples		|ddu-source-command-examples|
+Introduction                          |ddu-source-command-introduction|
+Install                               |ddu-source-command-install|
+Params                                |ddu-source-command-params|
+Kind Body                             |ddu-kind-command-body|
+Kind Actions                          |ddu-kind-command-actions|
+Examples                              |ddu-source-command-examples|
 
 
 ==============================================================================
-INTRODUCTION			*ddu-source-command-introduction*
+Introduction ~
+                                             *ddu-source-command-introduction*
 
 This source collects ex-command that user defined.
 
 
 ==============================================================================
-INSTALL					*ddu-source-command-install*
+Install ~
+                                                  *ddu-source-command-install*
 
 Please install both "ddu.vim" and "denops.vim".
 
@@ -29,33 +33,48 @@ https://github.com/vim-denops/denops.vim
 
 
 ==============================================================================
-PARAMS					*ddu-source-command-params*
+Params ~
+                                                   *ddu-source-command-params*
 
 ==============================================================================
-ACTIONS					*ddu-kind-command-actions*
+Kind Body ~
+                                                            *ddu-kind-command*
+                                                       *ddu-kind-command-body*
 
-					*ddu-kind-command-action-edit*
+There is a kind for commands. It has action data having only one field
+"command".
+
+    {command}
+        (string)
+
+
+==============================================================================
+Actions ~
+                                                    *ddu-kind-command-actions*
+
+                                                *ddu-kind-command-action-edit*
 edit
-		Put the command in command line to edit.
+        Put the command in command line to edit.
 
 
 ==============================================================================
-EXAMPLES				*ddu-source-command-examples*
+Examples ~
+                                                 *ddu-source-command-examples*
 
 >
-	" Use emoji source.
-	call ddu#start({ 'sources': [{ 'name': 'command' }] })
+    " Use emoji source.
+    call ddu#start({ 'sources': [{ 'name': 'command' }] })
 
-	" You must set the default action.
-	call ddu#custom#patch_global(#{
-	    \   kindOptions: #{
-	    \     command: #{
-	    \       defaultAction: 'edit',
-	    \     },
-	    \   }
-	    \ })
+    " You must set the default action.
+    call ddu#custom#patch_global(#{
+        \   kindOptions: #{
+        \     command: #{
+        \       defaultAction: 'edit',
+        \     },
+        \   }
+        \ })
 <
 
 
 ==============================================================================
-vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
+" vim:tw=78:nosi:sts=4:ts=4:sw=4:et:ft=help:norl:
