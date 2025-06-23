@@ -1,6 +1,6 @@
 import type { Item } from "jsr:@shougo/ddu-vim@~10.3.0/types";
 import { BaseSource } from "jsr:@shougo/ddu-vim@~10.3.0/source";
-import * as fn from "jsr:@denops/std@~7.5.0/function";
+import * as fn from "jsr:@denops/std@~7.6.0/function";
 import type { OnInitArguments } from "jsr:@shougo/ddu-vim@~10.3.0/source";
 
 export type ActionData = {
