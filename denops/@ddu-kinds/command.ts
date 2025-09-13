@@ -2,9 +2,9 @@ import {
   type ActionArguments,
   ActionFlags,
   type Actions,
-} from "jsr:@shougo/ddu-vim@~10.3.0/types";
-import { BaseKind } from "jsr:@shougo/ddu-vim@~10.3.0/kind";
-import * as fn from "jsr:@denops/std@~7.6.0/function";
+} from "jsr:@shougo/ddu-vim@~11.1.0/types";
+import { BaseKind } from "jsr:@shougo/ddu-vim@~11.1.0/kind";
+import * as fn from "jsr:@denops/std@~8.0.0/function";
 import type { ActionData } from "../@ddu-sources/command.ts";
 
 type Params = Record<never, never>;
