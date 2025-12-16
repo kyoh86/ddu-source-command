@@ -1,7 +1,7 @@
-import type { Item } from "jsr:@shougo/ddu-vim@~11.1.0/types";
-import { BaseSource } from "jsr:@shougo/ddu-vim@~11.1.0/source";
-import * as fn from "jsr:@denops/std@~8.0.0/function";
-import type { OnInitArguments } from "jsr:@shougo/ddu-vim@~11.1.0/source";
+import type { Item } from "@shougo/ddu-vim/types";
+import { BaseSource } from "@shougo/ddu-vim/source";
+import * as fn from "@denops/std/function";
+import type { OnInitArguments } from "@shougo/ddu-vim/source";
 
 export type ActionData = {
   command: string;
