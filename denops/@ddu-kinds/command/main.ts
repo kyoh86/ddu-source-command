@@ -5,7 +5,7 @@ import {
 } from "@shougo/ddu-vim/types";
 import { BaseKind } from "@shougo/ddu-vim/kind";
 import * as fn from "@denops/std/function";
-import type { ActionData } from "../@ddu-sources/command.ts";
+import type { ActionData } from "../../@ddu-sources/command/main.ts";
 
 type Params = Record<never, never>;
 
