@@ -44,6 +44,11 @@ Example (vim-plug) ~
 Params ~
                                                    *ddu-source-command-params*
 
+This source sets action data as below for each item.
+
+    {command}
+        (string) The Ex command without a leading ":".
+
 Examples ~
                                                  *ddu-source-command-examples*
 
