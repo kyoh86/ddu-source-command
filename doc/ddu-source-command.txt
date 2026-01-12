@@ -10,8 +10,6 @@ Contents ~
 Introduction                          |ddu-source-command-introduction|
 Install                               |ddu-source-command-install|
 Params                                |ddu-source-command-params|
-Kind Body                             |ddu-kind-command-body|
-Kind Actions                          |ddu-kind-command-actions|
 Examples                              |ddu-source-command-examples|
 
 
@@ -26,38 +24,18 @@ This source collects ex-command that user defined.
 Install ~
                                                   *ddu-source-command-install*
 
-Please install both "ddu.vim" and "denops.vim".
+Please install "ddu.vim" and "denops.vim".
+You also need "ddu-kind-command" for the kind.
 
 https://github.com/Shougo/ddu.vim
 https://github.com/vim-denops/denops.vim
+https://github.com/kyoh86/ddu-kind-command
 
 
 ==============================================================================
 Params ~
                                                    *ddu-source-command-params*
 
-==============================================================================
-Kind Body ~
-                                                            *ddu-kind-command*
-                                                       *ddu-kind-command-body*
-
-There is a kind for commands. It has action data having only one field
-"command".
-
-    {command}
-        (string)
-
-
-==============================================================================
-Actions ~
-                                                    *ddu-kind-command-actions*
-
-                                                *ddu-kind-command-action-edit*
-edit
-        Put the command in command line to edit.
-
-
-==============================================================================
 Examples ~
                                                  *ddu-source-command-examples*
 
