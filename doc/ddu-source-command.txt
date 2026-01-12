@@ -9,8 +9,9 @@ Contents ~
 
 Introduction                          |ddu-source-command-introduction|
 Install                               |ddu-source-command-install|
-Params                                |ddu-source-command-params|
 Examples                              |ddu-source-command-examples|
+Action data                           |ddu-source-command-action-data|
+Actions                               |ddu-source-command-actions|
 
 
 ==============================================================================
@@ -31,29 +32,13 @@ https://github.com/Shougo/ddu.vim
 https://github.com/vim-denops/denops.vim
 https://github.com/kyoh86/ddu-kind-command
 
-Example (vim-plug) ~
->
-  Plug 'Shougo/ddu.vim'
-  Plug 'vim-denops/denops.vim'
-  Plug 'kyoh86/ddu-source-command'
-  Plug 'kyoh86/ddu-kind-command'
-<
-
 
 ==============================================================================
-Params ~
-                                                   *ddu-source-command-params*
-
-This source sets action data as below for each item.
-
-    {command}
-        (string) The Ex command without a leading ":".
-
 Examples ~
                                                  *ddu-source-command-examples*
 
 >
-    " Use emoji source.
+    " Use command source.
     call ddu#start({ 'sources': [{ 'name': 'command' }] })
 
     " You must set the default action.
@@ -65,6 +50,40 @@ Examples ~
         \   }
         \ })
 <
+
+
+==============================================================================
+Action data ~
+                                              *ddu-source-command-action-data*
+
+This source sets action data as below for each item.
+
+    {raw}
+        (string) The Ex command without a leading ":".
+
+
+    {cmd}
+        (string) The Ex command without a leading ":".
+
+
+==============================================================================
+Actions ~
+                                                  *ddu-source-command-actions*
+
+This kind provides actions below.
+
+                                             *ddu-kind-command-action-execute*
+execute
+    Execute command.
+
+                                                *ddu-kind-command-action-edit*
+edit
+    Edit command in command line.
+
+
+                                                *ddu-kind-command-action-help*
+help
+    Show help for the command.
 
 
 ==============================================================================

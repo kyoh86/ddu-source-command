@@ -4,7 +4,8 @@ import * as fn from "@denops/std/function";
 import type { OnInitArguments } from "@shougo/ddu-vim/source";
 
 export type ActionData = {
-  command: string;
+  raw: string;
+  cmd: string;
 };
 
 type Params = Record<never, never>;
@@ -43,7 +44,7 @@ export class Source extends BaseSource<Params> {
         .map((match) => {
           return {
             word: match[1],
-            action: { command: match[1] },
+            action: { raw: match[1], cmd: match[1] },
           };
         });
     } catch (e) {
